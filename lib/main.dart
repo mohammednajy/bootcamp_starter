@@ -2,8 +2,11 @@ import 'package:bootcamp_starter/features/active_share/receive_view.dart';
 import 'package:bootcamp_starter/features/auth/login_view.dart';
 import 'package:bootcamp_starter/features/auth/register_view.dart';
 import 'package:bootcamp_starter/features/home/home_view.dart';
+import 'package:bootcamp_starter/features/home/qr_code_view.dart';
 import 'package:bootcamp_starter/features/main_app/main_app_view.dart';
 import 'package:bootcamp_starter/features/onbording/onbording_view.dart';
+import 'package:bootcamp_starter/features/profile/add_or_edit_link_view.dart';
+import 'package:bootcamp_starter/features/profile/edit_profile_view.dart';
 import 'package:bootcamp_starter/features/profile/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,8 +44,11 @@ class MyApp extends StatelessWidget {
             RegisterView.id: (context) => RegisterView(),
             HomeView.id: (context) => const HomeView(),
             MainAppView.id: (context) => const MainAppView(),
-            ProfileView.id: (context) => const ProfileView(),
+            // ProfileView.id: (context) =>  ProfileView(),
             ReceiveView.id: (context) => const ReceiveView(),
+            QRCodeView.id: (context) =>  QRCodeView(),
+            EditProfile.id: (context) =>  EditProfile(),
+            // EditLinksView.id: (context) =>  EditLinksView(),
           },
         );
       },

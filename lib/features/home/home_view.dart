@@ -13,7 +13,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       // backgroundColor: kScaffoldColor,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
+        padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

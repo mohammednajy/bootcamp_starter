@@ -42,6 +42,13 @@ dependencies:
   #responsive
   flutter_screenutil: ^5.8.4
 
+  #ui
+  flutter_slidable: ^3.0.0
+
+
+  #qr
+  flutter_barcode_scanner: ^2.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

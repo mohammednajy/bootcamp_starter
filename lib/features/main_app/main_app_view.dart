@@ -1,6 +1,8 @@
+import 'package:bootcamp_starter/constants.dart';
 import 'package:bootcamp_starter/features/active_share/receive_view.dart';
 import 'package:bootcamp_starter/features/home/home_view.dart';
 import 'package:bootcamp_starter/features/main_app/widgets/custom_floating_nav_bar.dart';
+import 'package:bootcamp_starter/features/profile/add_or_edit_link_view.dart';
 import 'package:bootcamp_starter/features/profile/profile_view.dart';
 import 'package:flutter/material.dart';
 
@@ -19,16 +21,26 @@ class _MainAppViewState extends State<MainAppView> {
   late List<Widget?> screensList = [
     const ReceiveView(),
     const HomeView(),
-    const ProfileView()
+     ProfileView(isUser: false,username: '',)
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton:_currentIndex == 2? FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>AddOrEditLinksView()));
+        },
+        child: const Icon(Icons.add,color: Colors.white,),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50),
+        ),
+        backgroundColor: kPrimaryColor,
+      ) : null,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: SizedBox(),
+        automaticallyImplyLeading: false,
         actions: [
           IconButton(
               onPressed: () {},
@@ -37,7 +49,9 @@ class _MainAppViewState extends State<MainAppView> {
                 color: Colors.black,
               )),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/qrCodeView');
+              },
               icon:
               const Icon(Icons.qr_code_scanner_sharp, color: Colors.black)),
         ],
