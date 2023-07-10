@@ -26,10 +26,27 @@ class _MainAppViewState extends State<MainAppView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        elevation: 0,
         backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: SizedBox(),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.search,
+                color: Colors.black,
+              )),
+          IconButton(
+              onPressed: () {},
+              icon:
+              const Icon(Icons.qr_code_scanner_sharp, color: Colors.black)),
+        ],
       ),
+      // appBar: AppBar(
+      //   automaticallyImplyLeading: false,
+      //   elevation: 0,
+      //   backgroundColor: Colors.transparent,
+      // ),
       body: screensList[_currentIndex],
       extendBody: true,
       bottomNavigationBar: CustomFloatingNavBar(
